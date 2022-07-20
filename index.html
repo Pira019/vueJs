@@ -2,23 +2,22 @@
 <html lang="fr">
     <head>
         <title>Test html</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
     </head>
     <body>
-        <script src="https://unpkg.com/vue@3"></script>
+     
         <div id="app">
-            {{ message }}
+            {{ message }} {{ name }} 
         </div>
 
         <script>
-            const { createApp } = Vue
-          
-            createApp({
-              data() {
-                return {
-                  message: 'Hello bangd!'
-                }
-              }
-            }).mount('#app')
+            const app = new Vue({
+              el : '#app',
+              data : {
+                message : 5+7,
+                name : 'pires LUFUNGULA'
+               }
+            })
           </script>
     </body>
 </html>
