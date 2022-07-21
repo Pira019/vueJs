@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Test html</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+    </head>
+    <body>
+    <ul id="tab">
+        <li>tab {{ cos1 }}</li>
+        <li>tab {{ cos2 }}</li>
+        <li>tab {{ cos3 }}</li>
+        <li>Total {{ totalPrice }}</li>
+    </ul>
+    <script>
+        const app = new Vue({
+            el: '#tab',
+            data : {
+                cos1 : 15,
+                cos2 : 50,
+                cos3 : 5,
+            },
+           computed : {
+            totalPrice(){
+                return this.cos1+this.cos2+this.cos3
+            }
+           } 
+        })
+    </script>
+    </body>
+</html>
