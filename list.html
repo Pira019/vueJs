@@ -6,18 +6,29 @@
     </head>
     <body>
     <ul id="tab">
-        <li>tab {{ cos1 }}</li>
+        <li v-if="cos1 > 0">tab {{ cos1 }}</li>
         <li>tab {{ cos2 }}</li>
         <li>tab {{ cos3 }}</li>
+        <li v-for="item in array">
+            {{ item.label  +' ' + item.number }}
+            <a :href='item.url'>{{ item.label}}</a>
+        </li>
         <li>Total {{ totalPrice }}</li>
     </ul>
     <script>
         const app = new Vue({
             el: '#tab',
             data : {
-                cos1 : 15,
+                cos1 : 10,
                 cos2 : 50,
                 cos3 : 5,
+                array : [
+                    {
+                        label : 'LUFUNGULA',
+                        number : 150,
+                        url : 'index.html'
+                    }
+                ]
             },
            computed : {
             totalPrice(){
