@@ -1,15 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeLink from '../components/HomeLink.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
+ {
+    path: '/pires',
     name: 'home',
-    component: HomeView
-  },
+    component: HomeLink
+  }, 
   {
     path: '/about',
     name: 'about',
