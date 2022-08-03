@@ -1,12 +1,21 @@
 <template>  
-  <h1>Home page</h1> 
+  <div>
+    <h1>Ecole</h1>
+    <h1>{{ name }} {{ titre }}</h1>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'HomeLink', 
-  props : 
-    ['url','name']
+  props : {
+    titre: String,
+    name:{
+      type : String,
+      require : true, 
+      default : ''
+    }
+  }
    
 }
 </script>
